@@ -2,3 +2,4 @@
 /static
 btre/static
 .DS_Store
+db.sqlite3
