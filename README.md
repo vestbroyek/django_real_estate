@@ -45,7 +45,7 @@ Finally, if you're interested in the property, you can make an inquiry. This wil
 
 ![alt text](readme_assets/inquiry.png)
 
-### About and Featured listings
+### About and Featured listings
 The About page and Featured listings are a bit more basic. The About page just has some information about the company, and Admins can set a seller of the month.
 
 ![alt text](readme_assets/about.png)
