@@ -14,7 +14,7 @@ SECRET_KEY = "django-insecure-q=oyo4a#-%=74u9maigdre&ij(c$6b)b4_nb$4fu48%r-c+%ft
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost"]
 
 
 # Application definition
@@ -74,7 +74,7 @@ DATABASES = {
         "NAME": "btredb",
         "USER": "postgres",
         "PASSWORD": "password",
-        "HOST": "localhost"
+        "HOST": "localhost" #local: localhost, container: db
     }
 }
 
