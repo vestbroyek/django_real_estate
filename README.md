@@ -12,6 +12,7 @@ The website is for a fictional real estate company, BT Real Estate, and has a ra
 ## Walkthrough
 ### Landing page
 The landing page looks as follows:
+
 ![alt text](readme_assets/landing_page.png)
 
 In the header, we have contact details and social media links. 
@@ -69,15 +70,17 @@ There's also an admin area available for superusers and staff where you can easi
 ![alt text](readme_assets/admin.png)
 
 ## Running the app
-#### Locally or remotely
+### Locally or remotely
 I originally developed this app with a local Postgres server. If you decide to run locally, you need to edit `settings.py` and update the hostname of your database. You can of course also have a remote database server - also, just update the hostname and credentials.
 
-#### Container
+Then you would need to collect static assets like `python manage.py collectstatic` and run migrations with python `manage.py migrate`.
+
+### Container
 I have also provided a containerised configuration. `docker-compose.yaml` has definitions for the main app as well as a postgres container.
 
 The Django container has `django_entrypoint.sh` as its entrypoint. This script will collect all static files, apply migrations (which you may not want to do every time you run the container), and run the server. 
 
 Also, the Django container is configured to wait until the postgres container is not just running, but is healthy, using `pg_isready -U postgres` as a health check. 
 
-### Credits
+## Credits
 This work is based on a Udemy course by Brad Traversy called Python Django Dev to Deployment.
